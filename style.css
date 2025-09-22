@@ -1,43 +1,42 @@
 .banner-container {
-  position: relative;
+  position: relative;      /* Needed so title can sit on top */
   width: 100%;
   overflow: hidden;
 }
 
 .header-banner {
-  width: 100%;          /* Full width */
-  height: auto;         /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
   display: block;
 }
 
 .banner-title {
-  position: absolute;
-  top: 50%;             
-  left: 50%;            
-  transform: translate(-50%, -50%);
+  position: absolute;      /* Places text over image */
+  top: 50%;                /* Vertical center */
+  left: 50%;               /* Horizontal center */
+  transform: translate(-50%, -50%);  /* Perfect centering */
   color: white;
   font-family: 'Impact', sans-serif;
   text-align: center;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-  margin: 0;
-
-  /* Desktop size */
   font-size: 3rem;
-  padding: 0 20px;      /* Small padding so text doesn’t touch edges */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6); /* Makes it readable */
+  margin: 0;
+  padding: 0 20px;         /* Prevents text from touching edges */
 }
 
-/* Responsive: smaller screens */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .banner-title {
-    font-size: 2rem;    /* Smaller text on tablets/phones */
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   .banner-title {
-    font-size: 1.5rem;  /* Even smaller on small phones */
+    font-size: 1.5rem;
   }
 }
+
 
 
 
