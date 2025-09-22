@@ -1,20 +1,45 @@
-
-/* Banner Container */
 .banner-container {
   position: relative;
-  text-align: center;
-  height: auto;
+  width: 100%;
   overflow: hidden;
-  margin-bottom: 20px;
 }
 
 .header-banner {
-  max-width: 100%;
-  height: auto;
+  width: 100%;          /* Full width */
+  height: auto;         /* Maintain aspect ratio */
   display: block;
-  margin: 0 auto;
-
 }
+
+.banner-title {
+  position: absolute;
+  top: 50%;             
+  left: 50%;            
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Impact', sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  margin: 0;
+
+  /* Desktop size */
+  font-size: 3rem;
+  padding: 0 20px;      /* Small padding so text doesn’t touch edges */
+}
+
+/* Responsive: smaller screens */
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 2rem;    /* Smaller text on tablets/phones */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-title {
+    font-size: 1.5rem;  /* Even smaller on small phones */
+  }
+}
+
+
 
 
 
